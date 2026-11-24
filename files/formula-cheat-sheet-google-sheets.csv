@@ -1,0 +1,27 @@
+ID,Date,Rep,Customer,Category,Amount,,Formula,Live result,What's in the result cell
+1001,2026-01-05,Priya,Acme Co,Software,1200,,XLOOKUP,"=XLOOKUP(1005,A2:A11,C2:C11,""Not found"")","'=XLOOKUP(1005,A2:A11,C2:C11,""Not found"")"
+1002,2026-01-12,Marcus,Bolt Labs,Hardware,450,,INDEX + MATCH,"=INDEX(A2:A11,MATCH(""Echo Foods"",D2:D11,0))","'=INDEX(A2:A11,MATCH(""Echo Foods"",D2:D11,0))"
+1003,2026-01-20,Priya,Cedar Inc,Services,800,,FILTER,"=FILTER(D2:D11,E2:E11=""Software"")","'=FILTER(D2:D11,E2:E11=""Software"")"
+1004,2026-02-02,Lena,Acme Co,Hardware,300,,,,
+1005,2026-02-09,Marcus,Dune Media,Software,950,,,,
+1006,2026-02-17,Lena,  Bolt Labs   ,Services,600,,,,
+1007,2026-03-03,Priya,Echo Foods,Software,1500,,UNIQUE,=UNIQUE(E2:E11),'=UNIQUE(E2:E11)
+1008,2026-03-11,Marcus,Cedar Inc,Hardware,220,,,,
+1009,2026-03-19,Lena,Dune Media,Software,700,,,,
+1010,2026-03-28,Priya,Acme Co,Services,400,,SORT,=SORT(UNIQUE(C2:C11)),'=SORT(UNIQUE(C2:C11))
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,IFS,"=IFS(F2>=1000,""Large"",F2>=500,""Medium"",TRUE,""Small"")","'=IFS(F2>=1000,""Large"",F2>=500,""Medium"",TRUE,""Small"")"
+,,,,,,,SUMIFS,"=SUMIFS(F2:F11,E2:E11,""Software"",B2:B11,"">=""&DATE(2026,2,1),B2:B11,""<""&DATE(2026,3,1))","'=SUMIFS(F2:F11,E2:E11,""Software"",B2:B11,"">=""&DATE(2026,2,1),B2:B11,""<""&DATE(2026,3,1))"
+,,,,,,,COUNTIFS,"=COUNTIFS(C2:C11,""Priya"",F2:F11,"">500"")","'=COUNTIFS(C2:C11,""Priya"",F2:F11,"">500"")"
+,,,,,,,TEXT,"=TEXT(B2,""dddd"")","'=TEXT(B2,""dddd"")"
+,,,,,,,DATEDIF,"=DATEDIF(I27,TODAY(),""Y"")","'=DATEDIF(I27,TODAY(),""Y"")"
+,,,,,,,IFERROR,"=IFERROR(VLOOKUP(9999,A2:C11,3,FALSE),""Not found"")","'=IFERROR(VLOOKUP(9999,A2:C11,3,FALSE),""Not found"")"
+,,,,,,,TRIM,=TRIM(D7),'=TRIM(D7)
+,,,,,,,,,
+,,,,,,,Change the data in A:F and watch the results update. Sample data is fictional.,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,Birth date,,
+,,,,,,,Sam (sample),1994-07-15,
